@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActivityPrincipal"></activity>
+        <activity android:name=".ActivityConsultaAlumnos"></activity>
+        <activity android:name=".ActivityAgregarAlumno"></activity>
+        <activity android:name=".ActivityRegistrar"></activity>
+        <activity android:name=".ActivityEditarAlumno"></activity>
     </application>
 
 </manifest>
