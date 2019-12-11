@@ -53,13 +53,10 @@ public class ActivityEditarAlumno extends AppCompatActivity {
         spinnerSemestre.setSelection(getIntent().getIntExtra("semestre", 0));
         spinnerSemestre.setEnabled(getIntent().getBooleanExtra("enable", false));
 
-        boolean seEncontroCarrera = false;
         int posicionCarrera = 0;
-        while(!seEncontroCarrera){
-            if(spinnerCarrera.getItemAtPosition(posicionCarrera).toString().equals(getIntent().getStringExtra("carrera"))) {
-                seEncontroCarrera = true;
+        while(true){
+            if(spinnerCarrera.getItemAtPosition(posicionCarrera).toString().equals(getIntent().getStringExtra("carrera")))
                 break;
-            }
             posicionCarrera++;
         }
         spinnerCarrera.setSelection(posicionCarrera);

@@ -61,12 +61,15 @@ public class ActivityConsultaAlumnos extends AppCompatActivity {
                     });
                     recyclerViewEmpleados.setAdapter(adapter);
                 }
-                else
+                else {
                     cajaBuscar.setEnabled(true);
-                cajaBuscar.setText("");
+                    cajaBuscar.setText("");
+                }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {}
+
         });
 
         cajaBuscar = findViewById(R.id.caja_busqueda);
@@ -99,6 +102,7 @@ public class ActivityConsultaAlumnos extends AppCompatActivity {
             Toast.makeText(this, "No se encontraron registros", Toast.LENGTH_SHORT).show();
         else
             Toast.makeText(this, listaAlumnos.size()+" registro(s) encontrado(s)", Toast.LENGTH_SHORT).show();
+
         ListaAlumnosAdapter adapter=new ListaAlumnosAdapter(listaAlumnos);
         adapter.setOnClickListener(new View.OnClickListener() {
             @Override
